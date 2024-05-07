@@ -2,7 +2,13 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'fill-top': 'linear-gradient(180deg, #30015F 23.11%, #E169FF 100%)',
+        nft: ' linear-gradient(180deg, #9D2ABE 0%, #210E2E 100%)',
+        clan_dance: 'linear-gradient(180deg, #674932 0%, rgba(104, 73, 49, 0.00) 100%)'
+      }
+    }
   },
   plugins: []
 }

@@ -1,11 +1,21 @@
-import { useState } from 'react'
 import './App.css'
+import About from './components/about'
+import Banner from './components/banner'
+import Header from './components/header'
+import MiniGame from './components/mini-game'
+import NftMeme from './components/nft'
+import Tokenomics from './components/tokenomics'
 
 function App() {
   return (
-    <>
-      <p className='text-2xl text-red-500'>Hello</p>
-    </>
+    <main>
+      <Header />
+      <Banner />
+      <About />
+      <MiniGame />
+      <NftMeme />
+      <Tokenomics />
+    </main>
   )
 }
 

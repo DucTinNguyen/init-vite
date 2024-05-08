@@ -36,7 +36,7 @@ const menus = [
 
 const Header = () => {
   return (
-    <header className='fixed left-0 top-0 w-full bg-[rgba(11,11,11,0.7)]'>
+    <header className='fixed left-0 top-0 z-50 w-full bg-[rgba(11,11,11,0.7)]'>
       <section className='mx-auto flex h-[75px] w-full items-center justify-between lg:max-w-[1200px]'>
         <figure className='w-[168px]'>
           <img src={logo} alt='logo' />

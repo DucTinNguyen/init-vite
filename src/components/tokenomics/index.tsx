@@ -2,11 +2,11 @@ import Heading from '../common/heading'
 import chart from '~/assets/tokenomics/chart-graphic.png'
 const Tokenomics = () => {
   return (
-    <main className='h-[1037px] w-full bg-[url(./assets/tokenomics/Tokenomic.png)] pt-8'>
-      <section className='mx-auto max-w-[1548px]'>
+    <main className='h-[1037px] w-full bg-[url(./assets/tokenomics/Tokenomic.png)] pt-[128px]'>
+      <section className='mx-auto max-w-[1420px]'>
         <Heading title='Tokenomic' className='mx-auto w-[314px]' />
-        <section className='mt-[73px] flex justify-between'>
-          <section className='flex w-[428px] flex-col items-end'>
+        <section className='mt-[73px] flex'>
+          <section className='flex w-[428px] flex-col items-end pt-12'>
             <TokenItem
               title='10% Airdrop'
               className='items-end'
@@ -29,7 +29,7 @@ const Tokenomics = () => {
           <figure className='flex justify-center'>
             <img src={chart} alt='chart' />
           </figure>
-          <section className='flex w-[428px] flex-col items-start'>
+          <section className='ml-[60px] flex w-[428px] flex-col items-start pt-12'>
             <TokenItem
               title='5% rewards'
               titleClass='text-[#4989F9]'
@@ -45,6 +45,14 @@ const Tokenomics = () => {
             />
           </section>
         </section>
+        <TokenItem
+          className='mx-auto mt-6 w-[588px]'
+          title='75% LP'
+          titleClass='text-[#00D83A] text-center'
+          descClass='text-center'
+          desc='75% of the overall supply is reserved for pairing with a
+          liquidity pool on a decentralized exchange.'
+        />
       </section>
     </main>
   )
@@ -62,7 +70,7 @@ const TokenItem = ({ title, desc, titleClass, className, descClass }: IItemToken
   return (
     <div className={`flex flex-col items-start ${className}`}>
       <h3 className={`w-full text-[40px] font-bold uppercase ${titleClass}`}>{title}</h3>
-      <p className={`text-start text-2xl font-normal text-[#B5E7ED] ${descClass}`}>{desc}</p>
+      <p className={` text-2xl font-normal text-[#B5E7ED] ${descClass}`}>{desc}</p>
     </div>
   )
 }

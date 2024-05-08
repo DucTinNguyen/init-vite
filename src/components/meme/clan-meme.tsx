@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const clanItems = [
   {
     title: 'Manage clan',
@@ -21,11 +23,49 @@ const ClanMeme = () => {
   return (
     <section className='mx-auto mt-[156px] w-[1010px]'>
       <div className='mx-auto w-[490px]'>
-        <h2 className='text-center text-[60px] font-bold uppercase leading-[60px] text-[#FFB800]'>Clan MEME Dance</h2>
-        <p className='mx-auto mt-[10px] w-[441px] text-center text-2xl font-bold leading-[25px] text-[#fff]'>
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 70
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
+          className='text-center text-[60px] font-bold uppercase leading-[60px] text-[#FFB800]'
+        >
+          Clan MEME Dance
+        </motion.h2>
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 70
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.25
+            }
+          }}
+          className='mx-auto mt-[10px] w-[441px] text-center text-2xl font-bold leading-[25px] text-[#fff]'
+        >
           Get your rewards sky-high by becoming an all-powerful memelord
-        </p>
-        <div className='mx-auto mt-[30px] flex w-[274px] items-center justify-between'>
+        </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 70
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.5
+            }
+          }}
+          className='mx-auto mt-[30px] flex w-[274px] items-center justify-between'
+        >
           <span
             style={{
               textShadow: ' 1px 0px 0px #925908'
@@ -45,7 +85,7 @@ const ClanMeme = () => {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
 
       <section className='mt-10 grid grid-cols-4 gap-4'>

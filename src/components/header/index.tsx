@@ -38,9 +38,9 @@ const Header = () => {
   return (
     <header className='fixed left-0 top-0 z-50 w-full bg-[rgba(11,11,11,0.7)]'>
       <section className='mx-auto flex h-[75px] w-full items-center justify-between lg:max-w-[1200px]'>
-        <figure className='w-[168px]'>
+        <a href='#' className='w-[168px]'>
           <img src={logo} alt='logo' />
-        </figure>
+        </a>
         <nav className='flex items-center gap-x-8'>
           <ul className='flex items-center gap-8'>
             {menus.map((menu) => (

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const roadmaps = [
   {
     title: 'Play Airdrop - Q2 2024',
@@ -26,12 +28,37 @@ const roadmaps = [
 
 const Roamap = () => {
   return (
-    <main className='relative h-[1429px] w-full bg-[url(./assets/minigame/minigame.png)] bg-cover bg-no-repeat pt-[83px]'>
+    <main className='relative h-[1429px] w-full overflow-x-hidden bg-[url(./assets/minigame/minigame.png)] bg-cover bg-no-repeat pt-[83px]'>
       <section className='mx-auto w-full lg:w-[779px]'>
-        <h2 className='text-center text-[60px] font-bold text-[#FFB800]'>MEME dance ROADMAP</h2>
-        <p className='text-center text-[32px] font-bold leading-[20px] text-[#000]'>
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 70
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
+          className='text-center text-[60px] font-bold text-[#FFB800]'
+        >
+          MEME dance ROADMAP
+        </motion.h2>
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 70
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.25
+            }
+          }}
+          className='text-center text-[32px] font-bold leading-[20px] text-[#000]'
+        >
           What we’re going to do on our path to world domination
-        </p>
+        </motion.p>
       </section>
       <section className='relative z-10 mx-auto mt-[42px] flex w-[1200px] flex-col'>
         {roadmaps.map((item, index) => {
@@ -40,7 +67,7 @@ const Roamap = () => {
           )
         })}
       </section>
-      <div className='overlay bg-overlay_roadmap absolute left-0 top-0 h-full w-full'></div>
+      <div className='overlay absolute left-0 top-0 h-full w-full bg-overlay_roadmap'></div>
     </main>
   )
 }
@@ -54,7 +81,19 @@ interface IMileStone {
 
 const MileStone = ({ title, desc, index, background }: IMileStone) => {
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: index % 2 === 0 ? 1000 : -1000
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          delay: 0.25 * index
+        }
+      }}
+      viewport={{ once: true }}
       className={`${index % 2 === 0 ? 'items-start justify-end' : ' flex-row-reverse items-start justify-end'} flex space-x-[52px]`}
     >
       <div className='flex h-[281px] w-[74px] flex-col items-center'>
@@ -79,7 +118,7 @@ const MileStone = ({ title, desc, index, background }: IMileStone) => {
           })}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

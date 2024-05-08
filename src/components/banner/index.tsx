@@ -14,7 +14,7 @@ const Banner = () => {
           Meme Dance is an innovative new gaming platform designed for gaming enthusiasts. From active betting to
           passive staking, there are rewards for all users.
         </p>
-        <BtnPlayDance className='mx-auto mt-6 block h-[76px] w-[454px] text-[64px] leading-[70px]' />
+        <BtnPlayDance className='shaking mx-auto mt-6 block h-[76px] w-[454px] text-[64px] leading-[70px]' />
       </section>
       <section className='mx-auto w-[1720px]'>
         <figure className='absolute bottom-0'>

@@ -9,7 +9,7 @@ const memes = [pepe, duck, girl, doge, duck, rabbit, girl, doge]
 
 const NftMeme = () => {
   return (
-    <section className='mx-auto h-[900px] w-[1200px]'>
+    <section className='mx-auto w-full lg:h-[900px] lg:w-[1200px]'>
       <motion.h2
         initial={{
           opacity: 0,
@@ -19,11 +19,11 @@ const NftMeme = () => {
           opacity: 1,
           y: 0
         }}
-        className='text-center text-[60px] font-bold uppercase leading-[60px] text-[#FFB800]'
+        className='text-center text-xl font-bold uppercase leading-[60px] text-[#FFB800] lg:text-[60px]'
       >
         NFT meme
       </motion.h2>
-      <div className='mt-10 grid grid-cols-4 gap-6'>
+      <div className='mt-4 grid grid-cols-4 gap-2 px-6 lg:mt-10 lg:gap-6 lg:px-0'>
         {memes.map((item) => {
           return (
             <figure className='h-full w-full'>

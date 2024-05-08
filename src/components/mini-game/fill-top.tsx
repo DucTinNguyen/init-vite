@@ -7,7 +7,7 @@ const FillTopPage = () => {
       viewBox='0 0 1728 218'
       fill='none'
       preserveAspectRatio='xMidYMid slice'
-      className='absolute left-0 top-0 h-[218px] w-full'
+      className='absolute left-0 top-0 h-[50px] w-full lg:h-[218px]'
     >
       <path
         d='M1728 0H0V203.343C67.6721 218.339 279.502 234.654 585.443 179.949C967.869 111.569 993.05 174.551 1259.02 203.343C1471.79 226.376 1660.33 186.547 1728 163.754V0Z'

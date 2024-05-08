@@ -10,23 +10,23 @@ const MiniGame = () => {
     console.log('Element is in view: ', isInView)
   }, [isInView])
   return (
-    <main ref={ref} className='relative mx-auto h-[969px] w-full bg-[url(./assets/minigame/minigame.png)]'>
+    <main ref={ref} className='relative mx-auto h-[343px] w-full bg-[url(./assets/minigame/minigame.png)] lg:h-[969px]'>
       <FillTopPage />
-      <section className='mx-auto flex w-full items-center justify-between pt-[297px] lg:max-w-[1200px]'>
+      <section className='mx-auto flex w-full items-center justify-between px-6 pt-[110px] lg:max-w-[1200px] lg:px-0 lg:pt-[297px]'>
         <motion.figure
           initial={{
             opacity: 0,
-            y: 1000
+            y: 70
           }}
           animate={{
             opacity: isInView ? 1 : 0,
-            y: isInView ? 0 : 1000
+            y: isInView ? 0 : 70
           }}
-          className='h-full w-[600px]'
+          className='w-[150px] lg:w-[600px]'
         >
           <img src={party} alt='honey party' />
         </motion.figure>
-        <div className='w-[486px]'>
+        <div className='w-[190px] lg:w-[486px]'>
           <motion.h2
             initial={{
               opacity: 0,
@@ -36,7 +36,7 @@ const MiniGame = () => {
               opacity: isInView ? 1 : 0,
               y: isInView ? 0 : 1000
             }}
-            className='text-[40px] font-bold uppercase leading-[60px] text-[#FFB800]'
+            className='text-base font-bold uppercase text-[#FFB800] lg:text-[40px] lg:leading-[60px]'
           >
             Telegram mini game
           </motion.h2>
@@ -52,12 +52,12 @@ const MiniGame = () => {
                 delay: 0.5
               }
             }}
-            className='mb-[65px] mt-[10px] text-xl font-bold leading-[28px] text-[#000]'
+            className='mt-[10px] text-xs font-bold text-[#000] lg:mb-[65px] lg:text-xl lg:leading-[28px]'
           >
             Meme Dance to Art app is available on both iOS and Android. So you can tap your photos on fly, on the go,
             whenever, whenever.
           </motion.p>
-          <BtnPlayDance className='mt-6 block h-[76px] w-[454px] text-[64px] leading-[70px]' />
+          <BtnPlayDance className='mt-6 block h-[36px] w-[165px] text-xl lg:h-[76px] lg:w-[454px] lg:text-[64px] lg:leading-[70px]' />
         </div>
       </section>
     </main>

@@ -48,31 +48,31 @@ const list = [
 
 const About = () => {
   return (
-    <main className='about h-[929px] w-full bg-[url(./assets/about/bg-about.png)] py-10'>
-      <section className='mx-auto w-[1037px]'>
-        <Heading className='mx-auto w-[540px]' subtitle='Hello' title='meme dance' />
-        <div className='mt-[55px] flex flex-col gap-5'>
-          <p className='text-center text-xl font-normal leading-[30px] text-[#fff]'>
+    <main className='about h-full w-full bg-[url(./assets/about/bg-about.png)] bg-cover bg-no-repeat py-10 lg:h-[929px]'>
+      <section className='mx-auto w-full lg:w-[1037px]'>
+        <Heading className='mx-auto w-full lg:w-[540px]' subtitle='Hello' title='meme dance' />
+        <div className='mt-5 flex flex-col gap-5 px-[55px] lg:mt-[55px] lg:px-0'>
+          <p className='text-center text-xs font-normal leading-[11px] text-[#fff] lg:text-xl lg:leading-[30px]'>
             Welcome to <b>Meme Dance,</b> the innovative Telegram Mini App where finance meets fun in a vibrant virtual
             ecosystem. This groundbreaking Telegram Mini App is fully compatible with the TON ecosystem, ensuring
             seamless integration and unparalleled accessibility for users worldwide. From seasoned investors to
             newcomers exploring the world of cryptocurrency, <b>Meme Dance,</b> offers an engaging platform where
             everyone can thrive.
           </p>
-          <p className='text-center text-xl font-normal leading-[30px] text-[#fff]'>
+          <p className='text-center text-xs font-normal leading-[11px] text-[#fff] lg:text-xl lg:leading-[30px]'>
             What sets <b>Meme Dance,</b> apart are its three key advantages: simplicity, beginner-friendliness, and
             viral social features. With an intuitive interface and straightforward gameplay mechanics, players of all
             skill levels can easily navigate the world of <b>Meme Dance,</b> and start earning rewards from day one.
             Additionally, the game's viral social features enable players to connect with friends, form alliances, and
             compete for glory on the global stage, fostering a sense of camaraderie and community among players.
           </p>
-          <p className='text-center text-xl font-normal leading-[30px] text-[#fff]'>
+          <p className='text-center text-xs font-normal leading-[11px] text-[#fff] lg:text-xl lg:leading-[30px]'>
             Join the <b>Meme Dance,</b> revolution today and embark on an exciting journey where financial success and
             entertainment collide in the palm of your hand.
           </p>
         </div>
       </section>
-      <section className='mt-[163px] flex flex-col gap-y-[10px]'>
+      <section className='mt-20 flex flex-col gap-y-[10px] lg:mt-[163px]'>
         <Marquee
           style={{
             width: '1600px',
@@ -81,10 +81,10 @@ const About = () => {
         >
           {list.map(({ icon, title }, index) => (
             <li key={index} className='mr-10 flex items-center gap-3'>
-              <figure className='h-12 w-12 min-w-12'>
+              <figure className='h-5 w-5 min-w-5 lg:h-12 lg:w-12 lg:min-w-12'>
                 <img src={icon} alt={title} />
               </figure>
-              <span className='name_coin text-[#EBF3F4]'>{title}</span>
+              <span className='name_coin text-xs text-[#EBF3F4] lg:text-xl'>{title}</span>
             </li>
           ))}
         </Marquee>
@@ -97,10 +97,10 @@ const About = () => {
         >
           {list.map(({ icon, title }, index) => (
             <li key={index} className='mr-10 flex items-center gap-3'>
-              <figure className='h-12 w-12 min-w-12'>
+              <figure className='h-5 w-5 min-w-5 lg:h-12 lg:w-12 lg:min-w-12'>
                 <img src={icon} alt={title} />
               </figure>
-              <span className='name_coin text-[#EBF3F4]'>{title}</span>
+              <span className='name_coin text-xs text-[#EBF3F4] lg:text-2xl'>{title}</span>
             </li>
           ))}
         </Marquee>

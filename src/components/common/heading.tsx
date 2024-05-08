@@ -13,7 +13,7 @@ const Heading = ({ title, subtitle, description, className }: IHeading) => {
         <motion.h2
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className='text-center text-[64px] font-bold uppercase leading-[60px] text-[#fff]'
+          className='text-center text-[28px] font-bold uppercase text-[#fff] lg:text-[64px] lg:leading-[60px]'
         >
           {subtitle}
         </motion.h2>
@@ -21,7 +21,7 @@ const Heading = ({ title, subtitle, description, className }: IHeading) => {
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className='text-center text-[64px] font-bold uppercase leading-[60px] text-[#FFB800]'
+        className='text-center text-[28px] font-bold uppercase text-[#FFB800] lg:text-[64px] lg:leading-[60px]'
       >
         {title}
       </motion.h2>

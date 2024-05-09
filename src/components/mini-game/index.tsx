@@ -12,7 +12,7 @@ const MiniGame = () => {
       className='relative mx-auto h-[343px] w-full bg-[url(./assets/minigame/minigame.png)] md:h-[430px] lg:h-[969px]'
     >
       <FillTopPage />
-      <section className='mx-auto flex w-full items-center justify-between space-x-4 px-6 pt-[110px] md:w-[533px] lg:w-[1200px] lg:space-x-0 lg:px-0 lg:pt-[297px]'>
+      <section className='mx-auto flex w-full items-center justify-between space-x-4 px-6 pt-[110px] md:w-[533px] md:pt-[140px] lg:w-[1200px] lg:space-x-0 lg:px-0 lg:pt-[297px]'>
         <motion.figure
           initial={{
             opacity: 0,

@@ -13,7 +13,7 @@ const Banner = () => {
       className='banner relative h-[400px] w-full bg-[url(./assets/banner/banner-mb.png)] bg-cover bg-bottom bg-no-repeat md:h-[520px] lg:h-screen lg:bg-[url(./assets/banner/bg-banner.png)]'
     >
       <section className='relative z-50 mx-auto w-full pt-[90px] lg:w-[873px] lg:pt-[100px]'>
-        <figure className='mx-auto w-[217px] md:w-[383px] lg:h-[280px] lg:w-[840px]'>
+        <figure className='mx-auto w-[217px] md:w-[383px] lg:w-[640px] 2xl:h-[280px] 2xl:w-[840px]'>
           <img src={logoBanner} alt='logobanner' />
         </figure>
         <p className='heading mx-auto mt-2 w-[188px] text-base md:w-[330px] md:text-[28px] lg:mt-5 lg:w-[750px] lg:text-[64px]'>
@@ -23,16 +23,16 @@ const Banner = () => {
           Meme Dance is an innovative new gaming platform designed for gaming enthusiasts. From active betting to
           passive staking, there are rewards for all users.
         </p>
-        <BtnPlayDance className='shaking mx-auto mt-6 block h-[28px] w-[108px] text-[15px] md:h-[34px] md:w-[200px] md:text-[28px] md:leading-[30px] lg:h-[76px] lg:w-[454px] lg:text-[64px] lg:leading-[70px]' />
+        <BtnPlayDance className='shaking mx-auto mt-6 block h-[28px] w-[108px] text-[15px] md:h-[34px] md:w-[200px] md:text-[28px] md:leading-[30px] lg:h-[76px] lg:w-[316px] lg:text-[40px] lg:leading-[70px]' />
       </section>
       <figure className='light absolute left-1/2 top-[75px] hidden h-[968px] w-[1090px] -translate-x-1/2 opacity-50 lg:block'>
         <img src={light} alt='light' />
       </figure>
-      <section className='mx-auto w-full lg:w-[1720px]'>
-        <figure className='absolute bottom-0 hidden lg:block'>
+      <section className='mx-auto w-full lg:max-w-[1440px] 2xl:max-w-[1720px]'>
+        <figure className='absolute bottom-0 hidden lg:left-[130px] lg:block lg:w-[300px] 2xl:w-[500px]'>
           <img src={doge} alt='doge' />
         </figure>
-        <figure className='absolute bottom-0 right-[88px] hidden lg:block'>
+        <figure className='absolute bottom-0 right-[188px] hidden lg:block lg:w-[200px] 2xl:w-[400px]'>
           <img src={pepe} alt='doge' />
         </figure>
         <figure className='absolute bottom-0 left-0 block w-[180px] md:w-[256px] lg:hidden'>

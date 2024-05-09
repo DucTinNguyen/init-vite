@@ -8,7 +8,7 @@ const Tokenomics = () => {
       className='h-[450px] w-full bg-[url(./assets/tokenomics/Tokenomic.png)] pt-[60px] lg:h-[1037px] lg:pt-[128px]'
     >
       <Heading title='Tokenomic' className='mx-auto w-[314px]' />
-      <section className='mx-auto hidden max-w-[1420px] lg:block'>
+      <section className='mx-auto hidden max-w-[1420px] px-5 lg:block'>
         <section className='mt-[73px] flex'>
           <section className='flex w-[428px] flex-col items-end pt-12'>
             <TokenItem
@@ -30,8 +30,8 @@ const Tokenomics = () => {
             />
           </section>
 
-          <figure className='flex justify-center'>
-            <img src={chart} alt='chart' />
+          <figure className='mx-auto flex h-[400px] w-[400px] justify-center'>
+            <img src={chart} alt='chart' className='object-contain' />
           </figure>
           <section className='ml-[60px] flex w-[428px] flex-col items-start pt-12'>
             <TokenItem

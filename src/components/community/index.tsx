@@ -3,7 +3,7 @@ import telegram from '~/assets/commutity/telegram.svg'
 import discord from '~/assets/commutity/discord.svg'
 const Community = () => {
   return (
-    <main className='bg-[#9EDE4E] py-[70px]'>
+    <main className='hidden bg-[#9EDE4E] py-[70px] lg:block'>
       <section className='mx-auto w-[905px]'>
         <p className='text-center text-[32px] font-bold leading-[25px] text-[#012F33]'>Join us right now!</p>
         <h2 className='my-3 text-center text-[64px] font-bold uppercase leading-[60px] text-[#000]'>

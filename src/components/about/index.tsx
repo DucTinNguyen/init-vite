@@ -48,7 +48,10 @@ const list = [
 
 const About = () => {
   return (
-    <main className='about h-full w-full bg-[url(./assets/about/bg-about.png)] bg-cover bg-no-repeat py-10 lg:h-[929px]'>
+    <main
+      id='about'
+      className='about h-full w-full bg-[url(./assets/about/bg-about.png)] bg-cover bg-no-repeat py-10 lg:h-[929px]'
+    >
       <section className='mx-auto w-full lg:w-[1037px]'>
         <Heading className='mx-auto w-full lg:w-[540px]' subtitle='Hello' title='meme dance' />
         <div className='mt-5 flex flex-col gap-5 px-[55px] lg:mt-[55px] lg:px-0'>

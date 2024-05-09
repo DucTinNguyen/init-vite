@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 const roadmaps = [
   {
@@ -27,8 +28,15 @@ const roadmaps = [
 ]
 
 const Roamap = () => {
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
   return (
-    <main className='relative h-[1429px] w-full overflow-x-hidden bg-[url(./assets/minigame/minigame.png)] bg-cover bg-no-repeat pt-[83px]'>
+    <main
+      ref={ref}
+      id='roadmap'
+      className='relative h-[1000px] w-full bg-[url(./assets/minigame/minigame.png)] bg-cover bg-no-repeat pt-6 lg:h-[1429px] lg:pt-[83px]'
+    >
       <section className='mx-auto w-full lg:w-[779px]'>
         <motion.h2
           initial={{
@@ -39,7 +47,7 @@ const Roamap = () => {
             opacity: 1,
             y: 0
           }}
-          className='text-center text-[60px] font-bold text-[#FFB800]'
+          className='text-center text-xl font-bold uppercase text-[#FFB800] lg:text-[60px] lg:leading-[60px]'
         >
           MEME dance ROADMAP
         </motion.h2>
@@ -55,19 +63,26 @@ const Roamap = () => {
               delay: 0.25
             }
           }}
-          className='text-center text-[32px] font-bold leading-[20px] text-[#000]'
+          className='text-center text-xs font-bold text-[#000] lg:text-[32px] lg:leading-[20px]'
         >
           What we’re going to do on our path to world domination
         </motion.p>
       </section>
-      <section className='relative z-10 mx-auto mt-[42px] flex w-[1200px] flex-col'>
+      <section className='relative z-10 mx-auto mt-[42px] flex w-[350px] flex-col lg:w-[1200px]'>
         {roadmaps.map((item, index) => {
           return (
-            <MileStone key={index} index={index} title={item.title} desc={item.desc} background={item.background} />
+            <MileStone
+              inView={inView}
+              key={index}
+              index={index}
+              title={item.title}
+              desc={item.desc}
+              background={item.background}
+            />
           )
         })}
       </section>
-      <div className='overlay absolute left-0 top-0 h-full w-full bg-overlay_roadmap'></div>
+      <div className='overlay absolute left-0 top-1/2 h-full w-full bg-overlay_roadmap lg:top-0'></div>
     </main>
   )
 }
@@ -77,42 +92,44 @@ interface IMileStone {
   desc: String[]
   index: number
   background: string
+  inView: boolean
 }
 
-const MileStone = ({ title, desc, index, background }: IMileStone) => {
+const MileStone = ({ title, desc, index, background, inView }: IMileStone) => {
   return (
     <motion.div
       initial={{
         opacity: 0,
         x: index % 2 === 0 ? 1000 : -1000
       }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
+      animate={{
+        opacity: inView ? 1 : 0,
+        x: inView ? 0 : index % 2 === 0 ? 1000 : -1000,
         transition: {
           delay: 0.25 * index
         }
       }}
       viewport={{ once: true }}
-      className={`${index % 2 === 0 ? 'items-start justify-end' : ' flex-row-reverse items-start justify-end'} flex space-x-[52px]`}
+      className={`${index % 2 === 0 ? 'items-start justify-end' : ' flex-row-reverse items-start justify-end'} flex h-fit space-x-4 lg:space-x-[52px]`}
     >
-      <div className='flex h-[281px] w-[74px] flex-col items-center'>
+      <div className='flex h-[210px] w-5 flex-col items-center lg:h-[281px] lg:w-[74px]'>
         <p
           style={{ background }}
-          className='h-[74px] w-[74px] rounded-[37px] border-[17px] border-[rgba(255,255,255,0.88)]'
+          className='h-5 w-5 rounded-[10px] border-[5px] border-[rgba(255,255,255,0.88)] lg:h-[74px] lg:w-[74px] lg:rounded-[37px] lg:border-[17px]'
         ></p>
         <p
           style={{
-            borderWidth: 10,
             borderStyle: index === roadmaps.length - 1 ? 'dashed' : 'solid',
             borderColor: background
           }}
-          className='h-[calc(100%-74px)]'
+          className='h-[calc(100%-20px)] border-2 lg:h-[calc(100%-74px)] lg:border-[10px]'
         ></p>
       </div>
-      <div className='w-[510px]'>
-        <h3 className='mb-5 text-[40px] font-bold uppercase leading-[60px] text-[#FFB800]'>{title}</h3>
-        <p className='text-2xl font-bold leading-6 text-[#000]'>
+      <div className='w-[149px] lg:w-[510px]'>
+        <h3 className='text-base font-bold uppercase text-[#FFB800] lg:mb-5 lg:text-[40px] lg:leading-[60px]'>
+          {title}
+        </h3>
+        <p className='text-xs font-bold text-[#000] lg:text-2xl lg:leading-6'>
           {desc.map((item, index) => {
             return <p key={index}>{item}</p>
           })}

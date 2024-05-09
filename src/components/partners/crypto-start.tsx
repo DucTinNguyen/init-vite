@@ -1,13 +1,14 @@
-import BtnPlayDance from '../button/btn-dance'
-
+import cgs from '~/assets/partners/cgs.png'
 const CryptoStart = () => {
   return (
-    <main className='absolute bottom-0 h-[305px] w-full bg-[url(./assets/partners/circle-top.png)] bg-cover bg-no-repeat'>
-      <section className='mx-auto mt-8 w-[670px]'>
-        <h2 className='text-center text-[64px] font-bold uppercase leading-[60px] text-[#FFB800]'>
-          CRYPTO MEME DANCE STARTS TODAY!
+    <main className='absolute bottom-0 h-[190px] w-full bg-[url(./assets/partners/circle-top.png)] bg-cover bg-top bg-no-repeat lg:h-[305px]'>
+      <section className='mx-auto mt-8 w-full lg:w-[670px]'>
+        <h2 className='text-center text-lg font-bold uppercase text-[#FFB800] lg:text-[64px] lg:leading-[60px]'>
+          DEVELOPER
         </h2>
-        <BtnPlayDance className='mx-auto mt-10 block h-[76px] w-[454px] text-[64px] leading-[60px]' />
+        <figure className='mx-auto mt-6 w-20 '>
+          <img src={cgs} alt='cgs' />
+        </figure>
       </section>
     </main>
   )

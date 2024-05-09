@@ -5,4 +5,5 @@
 body {
   font-family: 'Gaegu', cursive;
   box-sizing: border-box;
+  scroll-behavior: smooth scroll;
 }

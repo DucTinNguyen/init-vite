@@ -1,18 +1,15 @@
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import party from '~/assets/minigame/party.png'
 import BtnPlayDance from '../button/btn-dance'
 import FillTopPage from './fill-top'
-import { motion, useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react'
 const MiniGame = () => {
   const ref = useRef(null)
   const isInView = useInView(ref)
-  useEffect(() => {
-    console.log('Element is in view: ', isInView)
-  }, [isInView])
   return (
     <main ref={ref} className='relative mx-auto h-[343px] w-full bg-[url(./assets/minigame/minigame.png)] lg:h-[969px]'>
       <FillTopPage />
-      <section className='mx-auto flex w-full items-center justify-between px-6 pt-[110px] lg:max-w-[1200px] lg:px-0 lg:pt-[297px]'>
+      <section className='mx-auto flex w-full items-center justify-between space-x-4 px-6 pt-[110px] lg:max-w-[1200px] lg:space-x-0 lg:px-0 lg:pt-[297px]'>
         <motion.figure
           initial={{
             opacity: 0,

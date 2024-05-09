@@ -4,7 +4,9 @@ import girl from '~/assets/meme-nft/girl-meme.png'
 import doge from '~/assets/meme-nft/doge-meme.png'
 import rabbit from '~/assets/meme-nft/rabbit-meme.png'
 import { motion } from 'framer-motion'
+import Marquee from 'react-fast-marquee'
 
+// , duck, rabbit, girl, doge
 const memes = [pepe, duck, girl, doge, duck, rabbit, girl, doge]
 
 const NftMeme = () => {
@@ -23,15 +25,24 @@ const NftMeme = () => {
       >
         NFT meme
       </motion.h2>
-      <div className='mt-4 grid grid-cols-4 gap-2 px-6 lg:mt-10 lg:gap-6 lg:px-0'>
-        {memes.map((item) => {
+      <Marquee className='mt-4 grid grid-cols-4 px-6 lg:mt-10 lg:px-0'>
+        {memes.slice(0, 4).map((item) => {
           return (
-            <figure className='h-full w-full'>
+            <figure className='mr-2 h-full w-[80px] lg:mr-6 lg:w-full'>
               <img src={item} alt='meme' />
             </figure>
           )
         })}
-      </div>
+      </Marquee>
+      <Marquee direction='right' className='mt-4 grid grid-cols-4 px-6 lg:mt-10 lg:px-0'>
+        {memes.slice(4, 8).map((item) => {
+          return (
+            <figure className='mr-2 h-full w-20 lg:mr-6 lg:w-full'>
+              <img src={item} alt='meme' />
+            </figure>
+          )
+        })}
+      </Marquee>
     </section>
   )
 }

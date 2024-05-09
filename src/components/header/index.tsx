@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='fixed left-0 top-0 z-50 w-full bg-[rgba(11,11,11,0.7)]'>
+      <header className='fixed left-0 top-0 z-[100] w-full bg-[rgba(11,11,11,0.7)]'>
         <section className='mx-auto flex h-[75px] w-full items-center justify-between px-6 py-3 lg:max-w-[1200px] lg:px-0 lg:py-0'>
           <figure onClick={handleClick}>
             <img src={icBar} alt='hambuger' className='block h-[36px] w-[40px] cursor-pointer lg:hidden' />
@@ -75,7 +75,7 @@ const Header = () => {
       </header>
       {/* sub - menu */}
       <section
-        className={`${show ? 'w-full px-3 py-5 opacity-100' : 'pointer-events-none w-0 opacity-0'} fixed left-0 top-0 z-[60] block h-screen bg-[#FCFEE4] transition-all duration-150 ease-linear  lg:hidden`}
+        className={`${show ? 'w-full px-3 py-5 opacity-100' : 'pointer-events-none w-0 opacity-0'} fixed left-0 top-0 z-[101] block h-screen bg-[#FCFEE4] transition-all duration-150 ease-linear  lg:hidden`}
       >
         <div className='flex items-center justify-between'>
           <a href='#' className='w-[103px]'>
@@ -113,7 +113,12 @@ const Header = () => {
         </div>
         <ul className='mt-9 flex flex-col gap-6'>
           {menus.map((menu) => (
-            <li key={menu.id}>
+            <li
+              onClick={() => {
+                setShow(!show)
+              }}
+              key={menu.id}
+            >
               <a href={menu.href} className={`text-xs font-normal capitalize text-[#EA9517]`}>
                 {menu.title}
               </a>

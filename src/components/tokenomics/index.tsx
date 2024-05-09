@@ -1,10 +1,14 @@
 import Heading from '../common/heading'
 import chart from '~/assets/tokenomics/chart-graphic.png'
+import TokenomicsMobile from './tokenomics-mb'
 const Tokenomics = () => {
   return (
-    <main className='h-[1037px] w-full bg-[url(./assets/tokenomics/Tokenomic.png)] pt-[128px]'>
-      <section className='mx-auto max-w-[1420px]'>
-        <Heading title='Tokenomic' className='mx-auto w-[314px]' />
+    <main
+      id='tokenomics'
+      className='h-[450px] w-full bg-[url(./assets/tokenomics/Tokenomic.png)] pt-[60px] lg:h-[1037px] lg:pt-[128px]'
+    >
+      <Heading title='Tokenomic' className='mx-auto w-[314px]' />
+      <section className='mx-auto hidden max-w-[1420px] lg:block'>
         <section className='mt-[73px] flex'>
           <section className='flex w-[428px] flex-col items-end pt-12'>
             <TokenItem
@@ -54,6 +58,7 @@ const Tokenomics = () => {
           liquidity pool on a decentralized exchange.'
         />
       </section>
+      <TokenomicsMobile />
     </main>
   )
 }

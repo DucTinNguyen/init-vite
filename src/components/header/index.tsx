@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='fixed left-0 top-0 z-[100] w-full bg-[rgba(11,11,11,0.7)]'>
+      <header className='fixed left-0 top-0 z-[100] w-full bg-[#0B0B0B] opacity-75'>
         <section className='mx-auto flex h-[75px] w-full items-center justify-between px-6 py-3 lg:max-w-[1200px] lg:px-0 lg:py-0'>
           <figure onClick={handleClick}>
             <img src={icBar} alt='hambuger' className='block h-[36px] w-[40px] cursor-pointer lg:hidden' />

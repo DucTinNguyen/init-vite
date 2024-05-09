@@ -4,9 +4,9 @@ import bgLight from '~/assets/dance/bg-light.png'
 import characters from '~/assets/dance/NV.png'
 const Dance = () => {
   return (
-    <main className='dance relative h-[300px] w-full overflow-hidden bg-[url(./assets/dance/DJ.png)] bg-cover bg-top bg-no-repeat lg:h-[1079px] lg:bg-bottom'>
+    <main className='dance relative h-[300px] w-full overflow-hidden bg-[url(./assets/dance/DJ.png)] bg-cover bg-top bg-no-repeat md:h-[478px] lg:h-[1079px] lg:bg-bottom'>
       <section className=''>
-        <figure className='relative mx-auto w-[250px] lg:w-[700px]'>
+        <figure className='relative mx-auto w-[250px] md:w-[350px] lg:w-[700px]'>
           <img src={pepeDance} alt='pepe dancer' className='relative z-10 lg:w-[700px]' />
           <img src={bgLight} alt='pepe dancer' className='pepe_dancer absolute top-0 lg:w-[800px]' />
         </figure>

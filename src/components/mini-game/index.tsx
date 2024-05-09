@@ -7,9 +7,12 @@ const MiniGame = () => {
   const ref = useRef(null)
   const isInView = useInView(ref)
   return (
-    <main ref={ref} className='relative mx-auto h-[343px] w-full bg-[url(./assets/minigame/minigame.png)] lg:h-[969px]'>
+    <main
+      ref={ref}
+      className='relative mx-auto h-[343px] w-full bg-[url(./assets/minigame/minigame.png)] md:h-[430px] lg:h-[969px]'
+    >
       <FillTopPage />
-      <section className='mx-auto flex w-full items-center justify-between space-x-4 px-6 pt-[110px] lg:max-w-[1200px] lg:space-x-0 lg:px-0 lg:pt-[297px]'>
+      <section className='mx-auto flex w-full items-center justify-between space-x-4 px-6 pt-[110px] md:w-[533px] lg:w-[1200px] lg:space-x-0 lg:px-0 lg:pt-[297px]'>
         <motion.figure
           initial={{
             opacity: 0,
@@ -19,11 +22,11 @@ const MiniGame = () => {
             opacity: isInView ? 1 : 0,
             y: isInView ? 0 : 70
           }}
-          className='w-[150px] lg:w-[600px]'
+          className='w-[150px] md:w-[244px] lg:w-[600px]'
         >
           <img src={party} alt='honey party' />
         </motion.figure>
-        <div className='w-[190px] lg:w-[486px]'>
+        <div className='w-[190px] md:w-[216px] lg:w-[486px]'>
           <motion.h2
             initial={{
               opacity: 0,

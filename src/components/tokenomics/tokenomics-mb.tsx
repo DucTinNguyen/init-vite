@@ -2,9 +2,9 @@ import chart from '~/assets/tokenomics/chart-graphic.png'
 
 const TokenomicsMobile = () => {
   return (
-    <main className='mt-[60px] flex items-center justify-between px-8 lg:hidden '>
+    <main className='mx-auto mt-[60px] flex w-full items-center justify-between px-8 md:w-[500px] lg:hidden '>
       <section>
-        <figure className='w-[168px]'>
+        <figure className='w-[168px] md:w-[250px]'>
           <img src={chart} alt='chart' />
         </figure>
       </section>

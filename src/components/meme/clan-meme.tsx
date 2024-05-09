@@ -22,7 +22,7 @@ const clanItems = [
 const ClanMeme = () => {
   return (
     <section className='mx-auto mt-[60px] w-full lg:mt-[156px] lg:w-[1010px]'>
-      <div className='mx-auto w-[221px] lg:w-[490px]'>
+      <div className='mx-auto w-[221px] md:w-[294px] lg:w-[490px]'>
         <motion.h2
           initial={{
             opacity: 0,
@@ -32,7 +32,7 @@ const ClanMeme = () => {
             opacity: 1,
             y: 0
           }}
-          className='text-center text-lg font-bold uppercase text-[#FFB800] lg:text-[60px] lg:leading-[60px]'
+          className='text-center text-lg font-bold uppercase text-[#FFB800] md:text-[28px] lg:text-[60px] lg:leading-[60px]'
         >
           Clan MEME Dance
         </motion.h2>
@@ -48,7 +48,7 @@ const ClanMeme = () => {
               delay: 0.25
             }
           }}
-          className='mx-auto mt-[10px] w-full text-center text-xs font-bold text-[#fff] lg:w-[441px] lg:text-2xl lg:leading-[25px]'
+          className='mx-auto mt-[10px] w-full text-center text-xs font-bold text-[#fff] md:text-base lg:w-[441px] lg:text-2xl lg:leading-[25px]'
         >
           Get your rewards sky-high by becoming an all-powerful memelord
         </motion.p>
@@ -64,13 +64,13 @@ const ClanMeme = () => {
               delay: 0.5
             }
           }}
-          className='mx-auto flex w-[150px] items-center justify-between lg:mt-[30px] lg:w-[274px]'
+          className='mx-auto flex w-[150px] items-center justify-between md:w-[200px] lg:mt-[30px] lg:w-[274px]'
         >
           <span
             style={{
               textShadow: ' 1px 0px 0px #925908'
             }}
-            className='text-xs font-bold uppercase tracking-[1px] text-[#F3AE06] lg:text-2xl'
+            className='text-xs font-bold uppercase tracking-[1px] text-[#F3AE06] md:text-base lg:text-2xl'
           >
             Explore Whitepaper
           </span>
@@ -111,7 +111,7 @@ const ClanMeme = () => {
         </motion.div>
       </div>
 
-      <section className='mt-10 grid grid-cols-2 gap-4 px-6 lg:grid-cols-4'>
+      <section className='mx-auto mt-10 grid grid-cols-2 gap-4 px-6 md:w-[500px] lg:w-full lg:grid-cols-4'>
         {clanItems.map((item, index) => {
           return <ClanItem key={index} title={item.title} desc={item.desc} />
         })}
@@ -130,7 +130,7 @@ interface IClanItem {
 
 const ClanItem = ({ title, desc }: IClanItem) => {
   return (
-    <div className='item hidden flex-col justify-start gap-[10px] rounded-3xl bg-clan_dance px-5 pt-8 pt-[96px] lg:flex'>
+    <div className='item hidden flex-col justify-start gap-[10px] rounded-3xl bg-clan_dance px-5 pt-[96px] lg:flex'>
       <h2 className='text-center text-lg lg:text-2xl'>{title}</h2>
       <p className='text-center text-xs font-normal text-[#D6BFA9] lg:text-base lg:leading-[22px]'>{desc}</p>
     </div>
@@ -138,7 +138,7 @@ const ClanItem = ({ title, desc }: IClanItem) => {
 }
 const ClanItemMobile = ({ title, desc }: IClanItem) => {
   return (
-    <div className='item bg-clan_mobile flex h-[131px] w-full flex-col justify-start gap-[6px] rounded-tl-[20px] rounded-tr-[20px] px-5 pt-8 shadow-[0_0.5px_0_0_#CCACF3] lg:hidden'>
+    <div className='item flex h-[131px] w-full flex-col justify-start gap-[6px] rounded-tl-[20px] rounded-tr-[20px] bg-clan_mobile px-5 pt-8 shadow-[0_0.5px_0_0_#CCACF3] lg:hidden'>
       <h2 className='text-center text-lg lg:text-2xl'>{title}</h2>
       <p className='text-center text-xs font-normal text-[#D6BFA9] lg:text-base lg:leading-[22px]'>{desc}</p>
     </div>
